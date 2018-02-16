@@ -12,6 +12,8 @@
 		7F8872EC2035B50A00C736AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F8872EA2035B50A00C736AB /* Main.storyboard */; };
 		7F8872EE2035B50A00C736AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F8872ED2035B50A00C736AB /* Assets.xcassets */; };
 		7F8872F12035B50A00C736AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F8872EF2035B50A00C736AB /* LaunchScreen.storyboard */; };
+		7FBAA95A20362DD4007058E1 /* NameBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBAA95820362DD4007058E1 /* NameBookTableViewCell.swift */; };
+		7FBAA95B20362DD4007058E1 /* NameBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FBAA95920362DD4007058E1 /* NameBookTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7F8872ED2035B50A00C736AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F8872F02035B50A00C736AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F8872F22035B50A00C736AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FBAA95820362DD4007058E1 /* NameBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameBookTableViewCell.swift; sourceTree = "<group>"; };
+		7FBAA95920362DD4007058E1 /* NameBookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameBookTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				7F8872E62035B50A00C736AB /* AppDelegate.swift */,
 				7F8872E82035B50A00C736AB /* ViewController.swift */,
+				7FBAA95820362DD4007058E1 /* NameBookTableViewCell.swift */,
+				7FBAA95920362DD4007058E1 /* NameBookTableViewCell.xib */,
 				7F8872EA2035B50A00C736AB /* Main.storyboard */,
 				7F8872ED2035B50A00C736AB /* Assets.xcassets */,
 				7F8872EF2035B50A00C736AB /* LaunchScreen.storyboard */,
@@ -124,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F8872F12035B50A00C736AB /* LaunchScreen.storyboard in Resources */,
+				7FBAA95B20362DD4007058E1 /* NameBookTableViewCell.xib in Resources */,
 				7F8872EE2035B50A00C736AB /* Assets.xcassets in Resources */,
 				7F8872EC2035B50A00C736AB /* Main.storyboard in Resources */,
 			);
@@ -137,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F8872E92035B50A00C736AB /* ViewController.swift in Sources */,
+				7FBAA95A20362DD4007058E1 /* NameBookTableViewCell.swift in Sources */,
 				7F8872E72035B50A00C736AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

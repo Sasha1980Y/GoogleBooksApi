@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,60 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoogleBooksApi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ncM-kJ-UFW">
+                                <rect key="frame" x="0.0" y="44" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hHk-Nc-Lj5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="uo9-vy-D35"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lwh-3H-4lv">
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="80" id="NZS-9U-WpQ" customClass="NameBookTableViewCell" customModule="GoogleBooksApi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NZS-9U-WpQ" id="610-iV-2Od">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="7Fj-ud-ahZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4zY-uL-syf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ncM-kJ-UFW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="0AN-ME-kLr"/>
+                            <constraint firstItem="Lwh-3H-4lv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3TH-lU-SLy"/>
+                            <constraint firstItem="ncM-kJ-UFW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4YK-iP-9aP"/>
+                            <constraint firstItem="Lwh-3H-4lv" firstAttribute="top" secondItem="ncM-kJ-UFW" secondAttribute="bottom" id="8Wm-G0-heQ"/>
+                            <constraint firstItem="ncM-kJ-UFW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9x7-nN-AlM"/>
+                            <constraint firstItem="Lwh-3H-4lv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fSC-H2-dKw"/>
+                            <constraint firstItem="ncM-kJ-UFW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pa5-3M-4bv"/>
+                            <constraint firstItem="Lwh-3H-4lv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="v7g-ZT-VFE"/>
+                            <constraint firstItem="ncM-kJ-UFW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="znj-QJ-FsG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="ncM-kJ-UFW" id="Q1f-9Z-mqz"/>
+                        <outlet property="tableView" destination="Lwh-3H-4lv" id="g5f-PU-fPG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
